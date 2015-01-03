@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+
+body {
+    background-color: AliceBlue ;
+    
+}
+label {
+    cursor: default;
+}
+input {
+    cursor: default;
+    box-shadow: 10px 10px 5px #888888;
+    elevation: lower;
+}
+
+#inputArray{
+	 text-align: center;
+	 
+	 
+}
+
+#inputErrors {
+    text-align: center;
+    color: red;
+    size: auto;
+    elevation: above;
+    background-color: infobackground;
+    box-shadow: 10px 10px 5px #888888;
+    display: none;
+    margin-left: 10px;
+    float:right;
+    
+}

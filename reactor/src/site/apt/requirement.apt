@@ -1,0 +1,68 @@
+
++--
+Given: N integers separated with a semicolon (duplicates are allowed). 
+
+Remove the duplicates from the given list and find the (N/3)-th largest element in the modified list. 
+
+Example: 
+
+List of integers: 1;9;5;7;2;5;2;1.
+
+Length of the list N is 8, so N/3 is 2. Second largest element must be found. When duplicates are removed, 
+
+the list becomes 1;9;5;7;2. Therefore, the answer is 7, because 7 is the second largest element in the 
+
+modified list.
+
+Implementation details: 
+
+1. Provide the solution for this task and implement it in Java. 
+
+2. Add a few test cases to test this solution. 
+
+3. Calculate the average time complexity of your solution using Big-O notation. 
+
+4. Add a README file and describe the steps to compile/test/run your application. 
+
+5. Send us back your zipped source files, README file, and *.jar (*.war) file, along with your average time 
+
+complexity estimation. 
+
+Please include as many of the following technologies/framework to your solution as possible: 
+
+1. Implement your solution as a web application with Servlets/JSPs. It should have one page with one input 
+
+field: for a semicolon-separated list of integers. A click on a button should display the correct solution. 
+
+2. Use Log4j for logging. 
+
+3. Use JUnit to implement test cases. 
+
+4. Use a service layer to implement the business logic of your solution. 
+
+5. Use Spring for dependency injection. 
+
+6. Use Maven or Gradle to build/test/run your project. 
+
+7. Use CSS to render your page(s). 
+
+8. Use AJAX on your page to retrieve the answer from the server. 
+
+9. Use client-side validation for the parameters on the page. 
+
+10. Use server-side validation for the parameters on the page. 
+
+11. Improve your web application by displaying a meaningful message if a user types a wrong URL to access 
+
+a resource in your web application. 
+
+12. Implement the search algorithm with average time complexity O(N*log(N)), where N is the number of 
+
+elements in the list. 
+
+13. Implement the search algorithm with average time complexity O(N), where N is the number of elements in 
+
+the list. 
+
+14. Implement a search algorithm that requires minimal memory.
+---
