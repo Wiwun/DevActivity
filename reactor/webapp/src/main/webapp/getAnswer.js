@@ -14,7 +14,7 @@ function getInputArray() {
 	$.ajax({
 		url : "/rest/inputArray.json"
 	}).then(function(data) {
-		$('#inputArray').val(data);
+		$('#inputArray').val(data.inputArray);
 	});
 }
 
@@ -29,7 +29,11 @@ function postInputArray(pInputValue) {
 	inputStr = ""+ $('#inputArray').val();
 	var integerArray = inputStr.split(',');
 
-	console.log(integerArray);
+	var inputSessionArray = {};
+	inputSessionArray.inputArray=integerArray;
+	
+	
+	
 	$.ajax({
 		dataType : "json",
 		url : "/rest/inputArray.json",
@@ -37,7 +41,7 @@ function postInputArray(pInputValue) {
 			'Accept' : 'application/json',
 			'Content-Type' : 'application/json'
 		},
-		data : JSON.stringify(integerArray),
+		data : JSON.stringify(inputSessionArray),
 		type : 'POST',
 		success : function() {
 			changeErrorText("Save Successfull", false);

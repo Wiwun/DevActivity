@@ -33,7 +33,7 @@ public class RestControllerExceptionHandler {
 				"InvalidState");
 
 	}
-	
+	 
 	// Invalid request goes to converters
 	@ExceptionHandler(HttpMessageNotReadableException.class)
 	ResponseEntity<VndErrors> badRequestFormat(HttpMessageNotReadableException e) {
@@ -41,8 +41,8 @@ public class RestControllerExceptionHandler {
 				"Invalid_JSON_request");
 	}
 
-	@ExceptionHandler(RuntimeException.class)
-	ResponseEntity<VndErrors> genericException(RuntimeException e) {
+	@ExceptionHandler(Exception.class)
+	ResponseEntity<VndErrors> genericException(Exception e) {
 		// Unknown Error
 		return errorResponseEntity(e, HttpStatus.INTERNAL_SERVER_ERROR, e
 				.getClass().toString());
@@ -61,4 +61,5 @@ public class RestControllerExceptionHandler {
 		headers.setContentType(mediaType);
 		return new ResponseEntity<VndErrors>(new VndErrors(logRef, msg ), headers,httpStatus);
 	}
+	
 }

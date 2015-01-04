@@ -7,11 +7,11 @@
   <packaging>pom</packaging>
   <name>devActivity-Reactor</name>
   <description>Parent Pom for all devActivity compotnent</description>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.1.10.RELEASE</version>
-    </parent>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.0.1.RELEASE</version>
+	</parent>
   
   <modules>
   	<module>algorythm</module>
@@ -24,7 +24,7 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <!-- or whatever version you use -->
+          
           <source>1.7</source>
           <target>1.7</target>
         </configuration>

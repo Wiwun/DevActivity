@@ -4,28 +4,29 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.print.attribute.standard.Severity;
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-import com.google.common.primitives.Ints;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-
-@Service
-@Scope(value="prototype", proxyMode=ScopedProxyMode.TARGET_CLASS)
+@Component
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY,isGetterVisibility = JsonAutoDetect.Visibility.ANY,getterVisibility = JsonAutoDetect.Visibility.ANY)
+@Scope(value="session")
 public class InputArraySessionBean  implements Serializable{
 
-	/**
-	 * 
-	 */
+
+	@JsonIgnore
 	private static final long serialVersionUID = 1L;
 	
-	private List<Integer> inputArray = new ArrayList<Integer>();
+	@JsonProperty
+	@NotNull
+	@NotEmpty
+	List<Integer> inputArray = new ArrayList<Integer>();
 
 	public InputArraySessionBean() 
 	{
@@ -34,20 +35,19 @@ public class InputArraySessionBean  implements Serializable{
 	
 	public InputArraySessionBean(InputArraySessionBean input) 
 	{
-		setInputArray(input.inputArray);
+		setInputArray(input.getInputArray());
 	}
 	public List<Integer> getInputArray() {
 		return inputArray;
 	}
 
-	public void setInputArray( List<Integer> inputArray) {
-		this.inputArray.clear();
-		this.inputArray.addAll(inputArray); 
+	public void setInputArray( List<Integer> pInputArray) {
+		inputArray = pInputArray;
 	}
 
 	public void assing(InputArraySessionBean pInputArray) {
 	
-		setInputArray(pInputArray.inputArray);
+		setInputArray(pInputArray.getInputArray());
 	}
 	
 
