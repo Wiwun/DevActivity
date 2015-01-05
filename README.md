@@ -80,6 +80,8 @@ ApplicationContext@6be4be2c: startup date [Sun Jan 04 20:01:28 EST 2015]; root o
 ```
 
 Tomcat should be running on port 8080 so you can now access the index.html page at http://localhost:8080/
+![DevActivity-Screenshot](doc/images/screenshot.jpg)
+
 
 #Algorythm implementation :
 
