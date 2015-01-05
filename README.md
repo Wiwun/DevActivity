@@ -1,14 +1,27 @@
 DevActivity
 ===========
 
+#Introduction
+
+DevActivity is a sample spring boot application that offer a Ajax/Rest html interface to solve the foolowing problems:
+
+>Given: N integers separated with a semicolon (duplicates are allowed). 
+>Remove the duplicates from the given list and find the (N/3)-th largest element in the modified list. 
+
+>Example: 
+>List of integers: 1;9;5;7;2;5;2;1.
+>Length of the list N is 8, so N/3 is 2. Second largest element must be found. When duplicates are removed, 
+>the list becomes 1;9;5;7;2. Therefore, the answer is 7, because 7 is the second largest element in the 
+>modified list.
+
 #Compile from sources:
 
 To compile you need Maven3 and JDK 1.7 installed in your system.
 To install maven you can follow theses instruction here:
 http://maven.apache.org/download.cgi#Installation
 
-* Download or clone the sources from github at https://github.com/Wiwun/DevActivity
-* Open a shell in DevActivity/reactor folder  and run maven goal package ie:
+1. Download or clone the sources from github at https://github.com/Wiwun/DevActivity
+2. Open a shell in DevActivity/reactor folder  and run maven goal package ie:
 
 ```
 C:\Users\Louis-Rene\Documents\GitHub\DevActivity\reactor>mvn package
@@ -35,7 +48,7 @@ C:\Users\Louis-Rene\Documents\GitHub\DevActivity\reactor>mvn package
 
 ```
 
-The directory webapp/target will contain the DevActivity jar
+The directory DevActivity/reactor/webapp/target will contain the spring boot application UberJar (DevActivity-0.1-SNAPSHOT.jar)
 
 #Run the application:
 
