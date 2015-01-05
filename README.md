@@ -85,7 +85,7 @@ Tomcat should be running on port 8080 so you can now access the index.html page 
 
 #Algorythm implementation :
 
-To solve the problem DevActivtiy use 3 phase process:
+To solve the problem DevActivtiy use a 3 phase process:
 
 1. Remove the duplicate in the arraylist
    * See class DemoAlgoService.java
@@ -101,6 +101,50 @@ To solve the problem DevActivtiy use 3 phase process:
    * This operation is constant and should be O(1) (see DemoAlgoService.java) because it use HashSet and ArrayList to access the calculated index. Both Structures have a O(1) for basic add and get operations.
    
 The overall performance should be O(nLogn +n)
+
+# Unit Test Implemented Based on JUnit 4:
+* reactor/algorythm/src/test/java/org/lrpb/demo/devActivity/algorythm/SorthAlgoTestCase.java
+    * Test the both sothing algo implemented, JDKSortingAlgo and HeapSortSortingAlgo
+* reactor/webapp/src/test/java/org/lrpb/demo/devActivity/algorythm/DemoAlgoServiceTest.java
+    * Test the overall process of resolving the N/3 th biggest number
+## Running the unit test
+Unit tests are parth of the maven building process but they can be launched specifically by running the following maven goal:
+
+```
+C:\Users\Louis-Rene\Documents\GitHub\DevActivity\reactor>mvn test
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO]
+[INFO] devActivity-Reactor
+[INFO] devActivity-Algorythm
+[INFO] DevActivity Webapp UberJar
+
+...
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.lrpb.demo.devActivity.algorythm.DemoAlgoServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec - in org.lrpb.demo.devActivity.algorythm.DemoAlgoServiceTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO]
+[INFO] devActivity-Reactor ................................ SUCCESS [  0.010 s]
+[INFO] devActivity-Algorythm .............................. SUCCESS [  4.986 s]
+[INFO] DevActivity Webapp UberJar ......................... SUCCESS [  1.736 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.694 s
+[INFO] Finished at: 2015-01-04T23:33:16-05:00
+[INFO] Final Memory: 11M/246M
+[INFO] ------------------------------------------------------------------------
+```
 
 
 
