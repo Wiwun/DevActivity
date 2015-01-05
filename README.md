@@ -3,7 +3,7 @@ DevActivity
 
 #Introduction
 
-DevActivity is a sample spring boot application that offer a Ajax/Rest html interface to solve the foolowing problems:
+DevActivity is a sample spring boot application that offer a Ajax/Rest html interface to solve the following problem:
 
 >Given: N integers separated with a semicolon (duplicates are allowed). 
 >Remove the duplicates from the given list and find the (N/3)-th largest element in the modified list. 
