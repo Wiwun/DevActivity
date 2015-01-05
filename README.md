@@ -3,7 +3,7 @@ DevActivity
 
 #Introduction
 
-DevActivity is a sample spring boot application that offer a Ajax/Rest html interface to solve the following problem:
+DevActivity is a demo spring boot application that offer a Ajax/Rest html interface to solve the following problem:
 
 >Given: N integers separated with a semicolon (duplicates are allowed). 
 >Remove the duplicates from the given list and find the (N/3)-th largest element in the modified list. 
@@ -16,9 +16,8 @@ DevActivity is a sample spring boot application that offer a Ajax/Rest html inte
 
 #Compiling from sources:
 
-To compile you need Maven3 and JDK 1.7 installed in your system.
-To install maven you can follow theses instruction here:
-http://maven.apache.org/download.cgi#Installation
+To compile you need Maven3 and a JDK 1.7 installed and configured in your system.
+To install maven you can follow theses instruction here:  http://maven.apache.org/download.cgi#Installation
 
 1. Download or clone the sources from github at https://github.com/Wiwun/DevActivity
 2. Open a shell in DevActivity/reactor folder  and run maven goal package ie:
@@ -102,7 +101,7 @@ To solve the problem DevActivtiy use a 3 phase process:
    
 The overall performance should be O(nLogn +n)
 
-# Unit Test Implemented Based on JUnit 4:
+# Unit Tests Implementation:
 * reactor/algorythm/src/test/java/org/lrpb/demo/devActivity/algorythm/SorthAlgoTest.java
     * Test the both sothing algo implemented, JDKSortingAlgo and HeapSortSortingAlgo
 * reactor/webapp/src/test/java/org/lrpb/demo/devActivity/algorythm/DemoAlgoServiceTest.java
