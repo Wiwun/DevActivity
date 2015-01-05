@@ -10,6 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,7 +27,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class RestControllerExceptionHandler {
 
 	
-	//Invalid State 
 	@ExceptionHandler(IllegalStateException.class)
 	ResponseEntity<VndErrors> badRequestFormat(IllegalStateException e) {
 		return errorResponseEntity(e, HttpStatus.PRECONDITION_REQUIRED,
@@ -34,13 +34,19 @@ public class RestControllerExceptionHandler {
 
 	}
 	 
-	// Invalid request goes to converters
 	@ExceptionHandler(HttpMessageNotReadableException.class)
 	ResponseEntity<VndErrors> badRequestFormat(HttpMessageNotReadableException e) {
 		return errorResponseEntity(e, HttpStatus.BAD_REQUEST,
 				"Invalid_JSON_request");
 	}
 
+	// Invalid request goes to converters
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	ResponseEntity<VndErrors> badRequestFormat(MethodArgumentNotValidException e) {
+		return errorResponseEntity(e, HttpStatus.BAD_REQUEST,
+				"Invalid_Argument");
+	}
+	
 	@ExceptionHandler(Exception.class)
 	ResponseEntity<VndErrors> genericException(Exception e) {
 		// Unknown Error

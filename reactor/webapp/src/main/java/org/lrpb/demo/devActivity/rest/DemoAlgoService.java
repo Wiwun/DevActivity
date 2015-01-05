@@ -5,7 +5,6 @@ import java.util.HashSet;
 import java.util.List;
 
 import org.lrpb.demo.devActivity.algorythm.SorthAlgo;
-import org.lrpb.demo.devActivity.algorythm.impl.JDKSortingAlgo;
 import org.lrpb.demo.devActivity.beans.InputArraySessionBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -14,10 +13,9 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-@Scope(value="prototype", proxyMode=ScopedProxyMode.TARGET_CLASS)
+@Scope(value="request", proxyMode=ScopedProxyMode.TARGET_CLASS)
 public class DemoAlgoService {
-	
-	
+		
 	@Autowired
 	private SorthAlgo algo;
 	
@@ -26,11 +24,10 @@ public class DemoAlgoService {
 	
 	public DemoAlgoService()
 	{
-		algo = new JDKSortingAlgo();
 	}
 	
 	
-	public DemoAlgoService(SorthAlgo pAlgo,InputArraySessionBean pInputArray)
+	public DemoAlgoService(SorthAlgo pAlgo, InputArraySessionBean pInputArray)
 	{
 		algo = pAlgo;
 		inputArray = pInputArray;
@@ -40,9 +37,9 @@ public class DemoAlgoService {
 	{
 		if ( inputArray == null || inputArray.getInputArray() == null  || inputArray.getInputArray().size() <= 0)
 		{
-			throw new IllegalStateException("Input Array not set in session.");
+			throw new IllegalStateException("DemoAlgoService: Input Array not set in session.");
 		}
-	
+
 		List<Integer> noDupList = new ArrayList<Integer> (new HashSet<Integer>(inputArray.getInputArray()));
 		
 		int N =  noDupList.size();

@@ -3,13 +3,13 @@
   <parent>
     <groupId>org.lrpb.demo.devActivity</groupId>
     <artifactId>reactor</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+ 	<version>0.1-SNAPSHOT</version>
   </parent>
   <artifactId>algorythm</artifactId>
   <name>devActivity-Algorythm</name>
   <description>Library containing the algorthm used in DevActivity</description>
   
-  
+   
   
   <dependencies>
   <dependency>

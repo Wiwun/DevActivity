@@ -26,6 +26,7 @@ public class InputArraySessionBean  implements Serializable{
 	@JsonProperty
 	@NotNull
 	@NotEmpty
+	@NotContainNull
 	List<Integer> inputArray = new ArrayList<Integer>();
 
 	public InputArraySessionBean() 

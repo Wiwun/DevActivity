@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Dev Activity Demo</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="index.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="navbar.css">
+</head>
+
+<body>
+	<table>
+	<tr> <td>
+	<div id="header" class="navbar" align="left">
+		<ul class="navbar">
+			<li class="navbar"><a class="navbar" href="#Anchor1">CSS-NavBar example1</a></li>
+			<li class="navbar"><a class="navbar" href="#Anchor2">CSS-NavBar example2</a></li>
+			<li class="navbar"><a class="navbar" href="#Anchor3">CSS-NavBar example3</a></li>
+			<li class="navbar"><a class="navbar" href="#Anchor4">CSS-NavBar example4</a></li>
+		</ul>
+		<br>
+	</div>
+	</td>
+</tr>   
+<tr>
+<td>
+	<div id='formSection' align="left">
+		<Table>
+		<tr>
+		<td><p>Please enter a list of comma separated integers, ie: "1,9,5,7,2,5,2,1" and click save.</p></td>
+		</tr>
+			<tr>
+				<td><input id="inputArray" 
+					onkeyup="validateArray()" style="width: 606px; height: 74px"></input>
+				</td>
+				<td style="width: 166px;">
+					<p id="inputErrors" class="inputErrors" style="height: 69px;">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<Button id="Save_button" onclick='postInputArray()'>Save</Button>
+					<input type="checkbox" id="disable_clientSideValidation" onclick='toogleDisableClientSideValidation()'/>Disable Client Side Validation
+				<div id="resultSection">
+		<table>
+			<tr>
+				<td><label for="result-value">Result:</label>
+					<p id="result-value" class="result"></p></td>
+			</tr>
+		</table>
+	</div></td>
+				<td>
+					
+				</td>
+			</tr>
+		</Table>
+	</div>
+	<td></tr>
+	</table>
+</body>
+</html>
