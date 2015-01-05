@@ -14,7 +14,7 @@ DevActivity is a sample spring boot application that offer a Ajax/Rest html inte
 >the list becomes 1;9;5;7;2. Therefore, the answer is 7, because 7 is the second largest element in the 
 >modified list.
 
-#Compile from sources:
+#Compiling from sources:
 
 To compile you need Maven3 and JDK 1.7 installed in your system.
 To install maven you can follow theses instruction here:
@@ -103,7 +103,7 @@ To solve the problem DevActivtiy use a 3 phase process:
 The overall performance should be O(nLogn +n)
 
 # Unit Test Implemented Based on JUnit 4:
-* reactor/algorythm/src/test/java/org/lrpb/demo/devActivity/algorythm/SorthAlgoTestCase.java
+* reactor/algorythm/src/test/java/org/lrpb/demo/devActivity/algorythm/SorthAlgoTest.java
     * Test the both sothing algo implemented, JDKSortingAlgo and HeapSortSortingAlgo
 * reactor/webapp/src/test/java/org/lrpb/demo/devActivity/algorythm/DemoAlgoServiceTest.java
     * Test the overall process of resolving the N/3 th biggest number
