@@ -81,5 +81,24 @@ ApplicationContext@6be4be2c: startup date [Sun Jan 04 20:01:28 EST 2015]; root o
 
 Tomcat should be running on port 8080 so you can now access the index.html page at http://localhost:8080/
 
+#Algorythm implementation :
+
+To solve the problem DevActivtiy use 3 phase process:
+
+1. Remove the duplicate in the arraylist
+   * See class DemoAlgoService.java
+   * Use Jdk HashSet data structure that dont allow duplicate.
+   * Big O calculation : HashSet is documented as a O(1) for adding operation, so the duplication removal have a maximum cost of O(N).
+
+2. Sorth the array. 
+  * By default it use jdk Collections.sort() to sorth the array. See (DemoAlgoService.java)
+  * Big O calculation : According to the JDK 1.7 documentation, this function use MergeSort algoryth wich have a worst case of O(nlogn).
+  * It is possible however to use another sorthing implementation see HeapSortSortingAlgo.java and Application.getSorthAlgo() factory method for details.
+
+3. Return the N/3 th biggest number by returning the number from the end of the sorted array at index N-(N/3)-1
+   * This operation is constant and should be O(1) (see DemoAlgoService.java) because it use HashSet and ArrayList to access the calculated index. Both Structures have a O(1) for basic add and get operations.
+   
+The overall performance should be O(nLogn +n)
+
 
 
