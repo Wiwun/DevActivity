@@ -51,7 +51,7 @@ The directory DevActivity/reactor/webapp/target will contain the spring boot app
 
 #Run the application:
 
-DevActivity jar is packaged with all the dependencies it need including an embeded version of tomcat.
+DevActivity jar is packaged with all the dependencies it need including an embedded version of tomcat.
 Simply run the jar file as such:
 
 ```
