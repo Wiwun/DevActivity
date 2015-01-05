@@ -18,7 +18,7 @@ public class JDKSortingAlgo implements SorthAlgo {
 
 	/** 
 	 * Sort the given pArrayList with JDK Collection.sort class implementation
-	 * According to the JDK docuemntaton, this function should have a O(nlogn +n)
+	 * According to the JDK documentation, this function should have a O(nlogn +n)
 	 * 
 	 * @see org.lrpb.demo.devActivity.algorythm.SorthAlgo#sorthDecreasing(java.util.List)
 	 */
