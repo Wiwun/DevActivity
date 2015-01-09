@@ -91,7 +91,7 @@ To solve the problem DevActivtiy use a 3 phase process:
    * Use Jdk HashSet data structure that don't allow duplicate.
    * Big O calculation : HashSet is documented as a O(1) for adding operation, so the duplication removal have a maximum cost of O(N).
 
-2. Sorth the array. 
+2. Sort the array. 
   * By default it use jdk Collections.sort() to sorth the array. See (DemoAlgoService.java)
   * Big O calculation : According to the JDK 1.7 documentation, this function use MergeSort algoryth wich have a worst case of O(nlogn).
   * It is possible however to use another sorting implementation see HeapSortSortingAlgo.java and Application.getSorthAlgo() factory method for details.
