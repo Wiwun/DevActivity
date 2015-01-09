@@ -3,7 +3,7 @@ DevActivity
 
 #Introduction
 
-DevActivity is a demo spring boot application that offer a Ajax/Rest html interface to solve the following problem:
+DevActivity is a demo spring boot application that offers a Ajax/Rest html interface to solve the following problem:
 
 >Given: N integers separated with a semicolon (duplicates are allowed). 
 >Remove the duplicates from the given list and find the (N/3)-th largest element in the modified list. 
@@ -82,19 +82,19 @@ Tomcat should be running on port 8080 so you can now access the index.html page 
 ![DevActivity-Screenshot](doc/images/Screenshot.jpg)
 
 
-#Algorythm implementation :
+#Algorithm implementation:
 
 To solve the problem DevActivtiy use a 3 phase process:
 
-1. Remove the duplicate in the arraylist
+1. Remove the duplicate in the integer list
    * See class DemoAlgoService.java
-   * Use Jdk HashSet data structure that dont allow duplicate.
+   * Use Jdk HashSet data structure that don't allow duplicate.
    * Big O calculation : HashSet is documented as a O(1) for adding operation, so the duplication removal have a maximum cost of O(N).
 
 2. Sorth the array. 
   * By default it use jdk Collections.sort() to sorth the array. See (DemoAlgoService.java)
   * Big O calculation : According to the JDK 1.7 documentation, this function use MergeSort algoryth wich have a worst case of O(nlogn).
-  * It is possible however to use another sorthing implementation see HeapSortSortingAlgo.java and Application.getSorthAlgo() factory method for details.
+  * It is possible however to use another sorting implementation see HeapSortSortingAlgo.java and Application.getSorthAlgo() factory method for details.
 
 3. Return the N/3 th biggest number by returning the number from the end of the sorted array at index N-(N/3)-1
    * This operation is constant and should be O(1) (see DemoAlgoService.java) because it use HashSet and ArrayList to access the calculated index. Both Structures have a O(1) for basic add and get operations.
@@ -107,7 +107,7 @@ The overall performance should be O(nLogn +n)
 * reactor/webapp/src/test/java/org/lrpb/demo/devActivity/algorythm/DemoAlgoServiceTest.java
     * Test the overall process of resolving the N/3 th biggest number
 ## Running the unit test
-Unit tests are parth of the maven building process but they can be launched specifically by running the following maven goal:
+Unit tests are part of the maven building process but they can be launched specifically by running the following maven goal:
 
 ```
 C:\Users\Louis-Rene\Documents\GitHub\DevActivity\reactor>mvn test
